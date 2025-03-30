@@ -6,12 +6,25 @@ import matplotlib.colors as colors
 # Define the quadratic loss function J(w, b)
 # This function calculates the mean squared error for three data points:
 # (150, 200), (200, 600), and (260, 500)
-def calculate_loss(w, b):
+
+#def calculate_loss(w, b):
     return (
         ((150*w + b - 200)**2 + 
          (200*w + b - 600)**2 + 
          (260*w + b - 500)**2) / 3
     )
+
+# Define the quadratic loss function J(w, b)
+# This function calculates the mean squared error for three data points:
+# (150, 200), (200, 600), and (260, 500)
+# Modified loss function to use weighted MSE, giving more weight to the first data point
+def calculate_loss(w, b):
+    return (
+        (2*(150*w + b - 200)**2 + 
+         (200*w + b - 600)**2 + 
+         (260*w + b - 500)**2) / 4
+    )
+
 
 # Set up the plot parameters
 plt.rcParams['font.size'] = 16
