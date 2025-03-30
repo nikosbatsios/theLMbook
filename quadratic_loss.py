@@ -26,9 +26,9 @@ Z = calculate_loss(W, B)
 
 # Create custom colormap
 colors_palette = [
-    '#4a90e2',   # Blue
-    '#f8e71c',   # Yellow 
-    '#ff6b6b'    # Coral/Red
+    '#2ecc71',   # Green
+    '#9b59b6',   # Purple 
+    '#e74c3c'    # Red
 ]
 custom_cmap = colors.LinearSegmentedColormap.from_list('custom', colors_palette)
 
